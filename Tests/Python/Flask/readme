@@ -1,0 +1,3 @@
+Run with:
+Mac: source FlaskTestEnv/bin/activate
+Win: .\FlaskTestEnv\Scripts\activate
