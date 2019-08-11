@@ -25,7 +25,7 @@ def cookie():
 def form():
     return render_template('formC.html')
 
-# @app.route('/a')
+# @app.route('/a')s
 # def a():
 #     return render_template('index.html', name="23a")
 
