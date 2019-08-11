@@ -6,33 +6,16 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="{{
   url_for('static', filename='jquery.js') }}">\x3C/script>')</script>
+
+
 <script type=text/javascript>
   $SCRIPT_ROOT = {{ request.script_root|tojson|safe }};
 </script>
-<script type=text/javascript>
-  $(function() {
-    $('a#calculate').bind('click', function() {
-      $.getJSON($SCRIPT_ROOT + '/_add_numbers', {
-        a: $('input[name="a"]').val(),
-        b: $('input[name="b"]').val()
-      }, function(data) {
-        $("#result").text(data.result);
-        document.cookie = "last" + "=" + (data.result) + ";" + (1 * 24 * 60 * 60 * 1000) + ";path=/";
-
-
-
-
-      }
-
-      );
-      return false;
-    });
-  });
-  if ( $( '#2' ).length > 0 ) {
-  // Correct! This code will only run if there's an element in your page
-  // with an ID of 'nonexistent'
-}
+<script type=text/javascript  src="{{
+  url_for('static', filename='js/calc.js') }}">
 </script>
+
+
    <script type=text/javascript src="{{
   url_for('static', filename='js/calcCookie.js') }}"></script>
 
@@ -53,8 +36,3 @@
 
 </body>
 </html>
-<!--var d = new Date();-->
-  <!--d.setTime(d.getTime() + (1 * 24 * 60 * 60 * 1000));-->
-  <!--var expires = "expires="+d.toUTCString();-->
-  <!--document.cookie = "last" + "=" + $("#result").text(data.result) + ";" + expires + ";path=/";-->
-
