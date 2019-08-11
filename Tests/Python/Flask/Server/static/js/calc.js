@@ -1,6 +1,6 @@
 
 $(document).ready(function() {
-alert('a');
+//alert('a');
 $(function() {
     $('a#calculate').bind('click', function() {
       $.getJSON($SCRIPT_ROOT + '/_add_numbers', {

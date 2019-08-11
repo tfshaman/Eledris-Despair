@@ -13,6 +13,10 @@ app = Flask(__name__, static_url_path='')
 def index():
     return render_template('a.html')
 
+@app.route('/login')
+def login():
+    return render_template('login.html')
+
 @app.route('/pacman')
 def pacman():
     return render_template('index.html')
