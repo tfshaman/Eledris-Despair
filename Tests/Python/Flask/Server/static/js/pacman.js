@@ -140,7 +140,10 @@ Pacman.Ghost = function (game, map, colour) {
     };
 
     function draw(ctx) {
-  
+
+
+
+
         var s    = map.blockSize, 
             top  = (position.y/10) * s,
             left = (position.x/10) * s;

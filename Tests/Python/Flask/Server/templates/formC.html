@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+    <script type=text/javascript src="{{
+  url_for('static', filename='js/formCookie.js') }}"></script>
+   </head>
+
+   <body onload="ReadCookie()">
+      <form name = "myform" action = "" >
+         Enter name: <input type = "text" name = "customer" id="name" onfocusout="WriteCookie()"/>
+          Enter email: <input type = "text" name = "email" id="mail" onfocusout="WriteCookie()"/>
+          Enter number: <input type = "text" name = "number" id="number" onfocusout="WriteCookie()"/>
+      </form>
+   </body>
+</html>
